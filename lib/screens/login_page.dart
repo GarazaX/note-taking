@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_taking/constants.dart';
+import 'package:note_taking/screens/register_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -77,7 +83,10 @@ class LoginPage extends StatelessWidget {
           style: TextStyle(color: Colors.black.withOpacity(0.6)),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => RegisterPage()));
+          },
           child: Text(
             "Sign up",
             style: TextStyle(color: Color(0xff1B43AD)),
