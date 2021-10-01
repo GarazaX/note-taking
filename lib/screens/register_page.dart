@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_taking/constants.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -56,21 +56,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 200,
               ),
               buildMaterialButton("Sign up", () {}),
-              /*
-              Spacer(
-                flex: 2,
-              ),
-              Column(
-                children: [
-                  buildOrLoginLine(),
-                  buildGoogleButton(),
-                ],
-              ),
-              Spacer(
-                flex: 1,
-              ),
-              buildSignUpButton()
-              */
             ],
           ),
         ),
@@ -135,13 +120,6 @@ class _RegisterPageState extends State<RegisterPage> {
       ),
       top: -20,
       left: 0,
-    );
-  }
-
-  Widget buildDivider() {
-    return Divider(
-      color: Color(0xff707070).withOpacity(0.8),
-      thickness: 0.8,
     );
   }
 }
